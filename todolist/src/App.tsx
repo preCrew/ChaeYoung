@@ -3,17 +3,18 @@ import { useState } from 'react';
 import 'antd/dist/antd.min.css';
 
 import InputForm from './components/InputForm';
-import { List } from 'antd';
-export interface textVal {
-  text: string
-}
+import ListContents from './components/ListContents';
+
 
 const App = () => {
-  const [text,setText] = useState<string>('')
+  const [text,setText] = useState('')
+  const [userList,setUserList] = useState<string[]>([])
+
   return (
     <>
-      <InputForm text={text} setText={setText}/>
-      {/* <List {...text}/> */}
+    {console.log(userList)}
+      <InputForm text={text} setText={setText} setUserList={setUserList}/>
+      <ListContents text={text} userList={userList}/>
     </>
   )
 }
