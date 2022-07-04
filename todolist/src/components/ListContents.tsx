@@ -1,5 +1,7 @@
 import { List } from 'antd';
 
+import ListInCheckbox from './ListInCheckbox';
+
 const ListContents = ({text,userList}:{text: string,userList:string[]}) => {
     return (   
         <List
@@ -7,7 +9,7 @@ const ListContents = ({text,userList}:{text: string,userList:string[]}) => {
         dataSource={userList}
         renderItem={item => (
           <List.Item>
-            {item}
+            <ListInCheckbox text={item}/>
           </List.Item>
         )}
       />

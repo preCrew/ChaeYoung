@@ -18,7 +18,7 @@ const InputForm = ({text,setText,setUserList}: UserTodo) => {
   },[])
 
   const onClickInput = useCallback(()=>{
-    console.log(text)
+    //console.log(text)
     setUserList((prevState) => [text,...prevState])
     //초기화
     setText('')

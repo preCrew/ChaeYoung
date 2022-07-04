@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import './index.css'
 import 'antd/dist/antd.min.css';
 
 import InputForm from './components/InputForm';
@@ -12,7 +13,6 @@ const App = () => {
 
   return (
     <>
-    {console.log(userList)}
       <InputForm text={text} setText={setText} setUserList={setUserList}/>
       <ListContents text={text} userList={userList}/>
     </>

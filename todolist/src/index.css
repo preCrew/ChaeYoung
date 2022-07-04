@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-checkbox-wrapper.list--checked{
+  text-decoration: line-through;
+}
+.ant-checkbox {
+  width: 15px;
+  height: 15px;
+}
+.ant-checkbox .ant-checkbox-inner {
+  background-color: rgb(255,255,255);
+  border-color: rgb(0,0,0) !important;
+}
+.ant-checkbox-disabled .ant-checkbox-inner {
+  background-color: gray;
+  border-color: gray;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: rgb(89, 255, 0) !important;
+}
+.ant-checkbox-checked .ant-checkbox-inner:after{
+  border-color: rgb(0,0,0);
+}
