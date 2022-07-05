@@ -33,7 +33,8 @@ const InputForm = ({text,setText,setUserList}: UserTodo) => {
           <Input 
           value={text}
           onChange={onChangeText}
-          ref={inputRef}
+          ref={inputRef} 
+          onPressEnter={(e) => (e.key === 'Enter') && onClickInput()}
           placeholder="할일을 추가해주세요" />
           <Button 
           shape="circle"
