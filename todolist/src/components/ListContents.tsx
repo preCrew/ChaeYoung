@@ -4,7 +4,14 @@ import { DeleteOutlined } from '@ant-design/icons';
 import ListInCheckbox from './ListInCheckbox';
 import React, { useCallback } from 'react';
 
-const ListContents = ({text,userList,setUserList}:{text: string,userList: string[],setUserList: (deletTodo: string[]) => void}) => {
+interface ListinTodo {
+  text : string
+  userList : string[]
+  setUserList : (deletTodo: string[]) => void
+}
+
+
+const ListContents = ({text,userList,setUserList}: ListinTodo) => {
   const onClickDel = useCallback((val: string) => () => {
     const deletTodo = userList.filter(el => el !== val)
     setUserList(deletTodo)
