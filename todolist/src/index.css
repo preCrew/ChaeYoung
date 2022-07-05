@@ -33,3 +33,10 @@ code {
 .ant-checkbox-checked .ant-checkbox-inner:after{
   border-color: rgb(0,0,0);
 }
+.ant-btn.list__btn-del{
+  border: none;
+}
+.ant-btn.list__btn-del:hover{
+  color: rgb(0,0,0);
+  border-color: rgb(0,0,0);
+}

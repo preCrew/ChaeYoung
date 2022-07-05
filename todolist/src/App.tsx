@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <InputForm text={text} setText={setText} setUserList={setUserList}/>
-      <ListContents text={text} userList={userList}/>
+      <ListContents text={text} userList={userList} setUserList={setUserList}/>
     </>
   )
 }
