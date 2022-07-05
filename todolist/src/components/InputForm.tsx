@@ -28,18 +28,21 @@ const InputForm = ({text,setText,setUserList}: UserTodo) => {
   },[text])
 
     return (
-      <Row justify={'center'} align={'middle'}>
-        <Col xs={4}>
+      <Row justify={'center'} align={'middle'} className="todo__input-form">
+        <Col xs={24} className="todo__input-inner">
           <Input 
           value={text}
           onChange={onChangeText}
           ref={inputRef} 
           onPressEnter={(e) => (e.key === 'Enter') && onClickInput()}
-          placeholder="할일을 추가해주세요" />
+          placeholder="할일을 추가해주세요"
+          className="todo__input"
+          />
           <Button 
           shape="circle"
-          size='large' 
-          onClick={onClickInput}
+          onClick={onClickInput} 
+          className="todo__add-btn" 
+          style={{color: '#fff'}}      
           icon={<PlusOutlined />} />
         </Col>
       </Row>        

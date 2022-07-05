@@ -12,6 +12,7 @@ const ListContents = ({text,userList,setUserList}:{text: string,userList: string
 
     return (   
         <List
+        className='todo__list-item'
         bordered
         dataSource={userList}
         renderItem={item => (
